@@ -1,0 +1,46 @@
+@import "../base/variables";
+
+.popup {
+  display: block !important;
+  position: fixed !important;
+  top: 30% !important;
+  left: 50% !important;
+  transform: translate(-50%, -30%) !important;
+  min-width: 30% !important;
+  width: fit-content !important;
+  z-index: 1000 !important;
+}
+
+.popup .title {
+  width: 100%;
+  padding: 2.5%;
+  font-size: $title;
+  color: var(--text-accent);
+  text-align: center;
+  border-bottom: 1px solid var(--hover);
+}
+
+.popup-body {
+    width: 100%;
+    padding: 2.5%;
+}
+
+.popup-footer {
+    width: 100%;
+    padding: 3%;
+    border-top: 1px solid var(--hover);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.popup-footer button {
+    padding: 1% 5%;
+    border: 1px solid var(--hover);
+    margin-left: 3%;
+}
+
+.popup-footer .close-btn:hover {
+    background-color: var(--hover);
+    color: var(--bg);
+}

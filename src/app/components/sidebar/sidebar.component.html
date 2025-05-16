@@ -1,0 +1,26 @@
+<div class="sidebar area">
+  <div class="sidebar-header">
+    <h2 class="uppercase">{{ "budgets.title" | translate }}</h2>
+  </div>
+  <div class="sidebar-items">
+    <button
+      class="sidebar-item"
+      *ngFor="let budget of budgets"
+      [class]="{ active: activeBudget === budget }"
+      (click)="selectBudget(budget)"
+    >
+      {{ budget }}
+      <div class="sidebar-item-actions-container">
+        <button class="sidebar-item-delete" (click)="showDeletePopup(budget); $event.stopPropagation()">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </button>
+  </div>
+  <div class="sidebar-footer">
+    <button class="new-budget-sidebar-btn" (click)="showModal()">
+      <i class="fa-solid fa-plus"></i>{{ "budgets.new" | translate }}
+    </button>
+  </div>
+</div>
+<app-delete-budget></app-delete-budget>

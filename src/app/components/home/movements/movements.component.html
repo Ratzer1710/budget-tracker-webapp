@@ -1,0 +1,108 @@
+<div class="movements-wrapper area">
+  <div class="movements-header">
+    <button class="filter-btn clean-filters-btn" (click)="cleanFilters()">
+      <i class="fa-solid fa-broom"></i>
+    </button>
+    <div ngbDropdown class="d-inline-block sort-filter">
+      <button
+        type="button"
+        class="filter-btn"
+        id="sortDropdown"
+        ngbDropdownToggle
+      >
+        {{
+          ("filters.sort.title" | translate) +
+            (getSortText(filter.sort) | translate)
+        }}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="sortDropdown">
+        <button
+          ngbDropdownItem
+          *ngFor="let option of sortOptions"
+          [disabled]="filter.sort === option"
+          (click)="setSortFilter(option)"
+        >
+          {{ getSortText(option) | translate }}
+        </button>
+      </div>
+    </div>
+    <div class="filters">
+      <button
+        class="filter-btn type-filter income-filter"
+        [class]="{ active: filter.type === type.INCOME }"
+        (click)="setTypeFilter(type.INCOME)"
+      >
+        {{ "budgets.income" | translate }}
+      </button>
+      <button
+        class="filter-btn type-filter expense-filter"
+        [class]="{ active: filter.type === type.EXPENSE }"
+        (click)="setTypeFilter(type.EXPENSE)"
+      >
+        {{ "budgets.expenses" | translate }}
+      </button>
+      <button
+        *ngFor="let category of topCategories"
+        class="filter-btn category-filter"
+        [class]="{ active: filter.categories.includes(category) }"
+        (click)="toggleCategory(category)"
+      >
+        {{ category }}
+      </button>
+    </div>
+  </div>
+  <div class="movements-table">
+    <div class="movements-table-header row bold">
+      <div class="type"></div>
+      <div class="date">
+        {{ "calendar.date" | translate }}
+      </div>
+      <div class="category">{{ "movements.category" | translate }}</div>
+      <div class="description">{{ "movements.description" | translate }}</div>
+      <div class="value">{{ "movements.value" | translate }}</div>
+      <div class="total">{{ "movements.total" | translate }}</div>
+      <div class="actions"></div>
+    </div>
+    <div class="movement row" *ngFor="let movement of movements">
+      <div class="type">
+        <div class="movement-type" [class]="movement.type"></div>
+      </div>
+      <div class="date">
+        {{ movement.date | localDate }}
+      </div>
+      <div class="category">{{ movement.category }}</div>
+      <div class="description" [innerHTML]="movement.description"></div>
+      <div class="value" [class]="movement.type">
+        {{ movement.value | currency }}
+      </div>
+      <div class="total">{{ movement.total | currency }}</div>
+      <div class="actions">
+        <button
+          class="edit-movement-btn"
+          (click)="openEditMovementPopup(movement)"
+        >
+          <i class="fa-solid fa-pen"></i></button
+        ><button
+          class="delete-movement-btn"
+          (click)="openDeleteMovementPopup(movement.id)"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="movements-footer">
+    <button class="prev-month-btn" (click)="setPreviousMonth()">
+      <i class="fa-solid fa-angle-left"></i>{{ prevMonth | translate }}
+    </button>
+    <button class="new-movement-btn" (click)="openNewMovementModal()">
+      <i class="fa-solid fa-plus"></i>{{ "movements.new" | translate }}
+    </button>
+    <button class="next-month-btn" (click)="setNextMonth()">
+      {{ nextMonth | translate }}<i class="fa-solid fa-angle-right"></i>
+    </button>
+  </div>
+</div>
+<app-new-movement></app-new-movement>
+<app-delete-movement></app-delete-movement>
+<app-edit-movement></app-edit-movement>

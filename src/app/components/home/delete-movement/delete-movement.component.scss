@@ -1,0 +1,11 @@
+.delete-btn {
+    color: var(--red);
+    border-color: var(--red);
+    border-width: 2px;
+
+    &:hover {
+        opacity: 1;
+        background-color: var(--red);
+        color: #fff;
+    }
+}

@@ -1,0 +1,64 @@
+{
+  "actions": {
+    "title": "Acciones",
+    "create": "Crear",
+    "delete": "Borrar",
+    "update": "Actualizar",
+    "close": "Cerrar",
+    "final": "Esta operación no es reversible."
+  },
+  "budgets": {
+    "title": "Presupuestos",
+    "balance": "Balance",
+    "income": "Ingresos",
+    "expenses": "Gastos",
+    "new": "Nuevo Presupuesto",
+    "delete": "Borrar Presupuesto",
+    "edit": "Editar Presupuesto",
+    "name": "Nombre",
+    "currency": "Moneda",
+    "categories": "Categorías",
+    "categoriesPlaceholder": "Ingresa una Categoría",
+    "deleteSure": "¿Estás seguro de que quieres borrar este presupuesto?"
+  },
+  "movements": {
+    "title": "Movimientos",
+    "type": "Tipo",
+    "expense": "Gasto",
+    "income": "Ingreso",
+    "category": "Categoría",
+    "description": "Descripción",
+    "value": "Valor",
+    "total": "Total",
+    "new": "Nuevo Movimiento",
+    "edit": "Actualizar Movimiento",
+    "delete": "Borrar Movimiento",
+    "deleteSure": "¿Estás seguro de que quieres borrar este movimiento?"
+  },
+  "filters": {
+    "sort": {
+      "title": "Orden: ",
+      "latest": "Más nuevos",
+      "oldest": "Más antiguos"
+    }
+  },
+  "calendar": {
+    "date": "Fecha",
+    "months": {
+      "0": "Diciembre",
+      "1": "Enero",
+      "2": "Febrero",
+      "3": "Marzo",
+      "4": "Abril",
+      "5": "Mayo",
+      "6": "Junio",
+      "7": "Julio",
+      "8": "Agosto",
+      "9": "Septiembre",
+      "10": "Octubre",
+      "11": "Noviembre",
+      "12": "Diciembre",
+      "13": "Enero"
+    }
+  }
+}

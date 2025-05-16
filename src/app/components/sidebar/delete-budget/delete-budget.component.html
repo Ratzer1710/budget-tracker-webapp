@@ -1,0 +1,20 @@
+<div class="overlay" *ngIf="isVisible" (click)="close()"></div>
+<div class="popup area" *ngIf="isVisible" (click)="$event.stopPropagation()">
+  <h2 class="title">{{ ("budgets.delete" | translate) + " " + name }}</h2>
+  <div class="popup-body">
+    <p class="bold subtitle">
+      {{ "budgets.deleteSure" | translate }}
+    </p>
+    <p class="bold red">
+      {{ "actions.final" | translate }}
+    </p>
+  </div>
+  <div class="popup-footer">
+    <button type="button" class="close-btn" (click)="close()">
+      {{ "actions.close" | translate }}
+    </button>
+    <button type="button" class="delete-btn" (click)="deleteBudget()">
+        {{ "actions.delete" | translate }}
+      </button>
+  </div>
+</div>

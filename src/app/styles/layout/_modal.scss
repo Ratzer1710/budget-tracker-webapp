@@ -1,0 +1,32 @@
+@import "../base/variables";
+
+.modal {
+  display: block !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 60% !important;
+  height: 90vh !important;
+  z-index: 1000 !important;
+  padding: 5% !important;
+}
+
+.modal .title {
+  font-size: $title-lg;
+  color: var(--text-accent);
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: $title;
+  color: var(--text-accent);
+
+  &:hover {
+    color: var(--red);
+  }
+}

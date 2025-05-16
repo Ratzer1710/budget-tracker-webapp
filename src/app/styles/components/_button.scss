@@ -1,0 +1,14 @@
+button {
+    border-radius: 5px !important;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--text);
+}
+
+button:disabled {
+    cursor: default !important;
+    opacity: 0.5 !important;
+}

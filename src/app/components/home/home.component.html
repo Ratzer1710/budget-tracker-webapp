@@ -1,0 +1,12 @@
+<ng-container *ngIf="budget !== null">
+<div class="budget-cards">
+    <app-budget-card [title]="'budgets.balance'" [type]="budgetType.BALANCE" [aux]="budget.currency"></app-budget-card>
+    <app-budget-card [card-class]="'green-card'" [title]="'budgets.income'" [type]="budgetType.INCOME" [aux]="monthAux"></app-budget-card>
+    <app-budget-card [card-class]="'red-card'" [title]="'budgets.expenses'" [type]="budgetType.EXPENSE" [aux]="monthAux"></app-budget-card>
+</div>
+<app-movements></app-movements>
+</ng-container>
+<div *ngIf="budget === null" class="create-budget-home-container area">
+    <button (click)="showModal()"><div class="new-budget-icon"><i class="fa-solid fa-plus"></i></div> <div class="new-budget-text">{{ 'budgets.new' | translate }}</div></button>
+</div>
+<app-new-budget></app-new-budget>

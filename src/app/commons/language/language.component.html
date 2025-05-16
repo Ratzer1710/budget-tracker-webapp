@@ -1,0 +1,18 @@
+<div class="language-selector" (click)="onToggleDropdown()">
+  <i class="fa-solid fa-globe"></i>
+  <i
+    class="fa-solid fa-chevron-up"
+    [ngClass]="{ 'rotate-icon': isDropdownOpen }"
+  ></i>
+</div>
+
+<div class="language-selector-dropdown" *ngIf="isDropdownOpen">
+  <div
+    *ngFor="let lang of langs"
+    class="option"
+    (click)="onChangeLanguage(lang.locale)"
+    [ngClass]="{ selected: lang.isSelected }"
+  >
+    <span>{{ lang.name }}</span>
+  </div>
+</div>

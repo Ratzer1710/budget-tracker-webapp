@@ -1,0 +1,48 @@
+.ngb-dp-day {
+  color: var(--text);
+  background-color: var(--bg-alt-2);
+
+  div {
+    border: none !important;
+    outline: none !important;
+  }
+
+  div:hover {
+    background-color: var(--hover) !important;
+    color: var(--text-accent) !important;
+    border: none;
+  }
+
+  .text-muted {
+    color: var(--text) !important;
+  }
+}
+
+.ngb-dp-today div {
+  background: var(--primary) !important;
+  color: #fff;
+}
+
+.ngb-dp-weekday {
+  color: var(--text) !important;
+  background-color: var(--bg-alt-2);
+}
+
+.ngb-dp-weekdays {
+  background-color: var(--bg-alt-2) !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.ngb-dp-month {
+  background-color: var(--bg-alt-2);
+}
+
+.ngb-dp-header {
+  background-color: var(--bg-alt-2) !important;
+}
+
+.ngb-dp-header .form-select, .ngb-dp-header .form-select option {
+    color: var(--text);
+    background-color: var(--bg-alt);
+}

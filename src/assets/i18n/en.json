@@ -1,0 +1,64 @@
+{
+  "actions": {
+    "title": "Actions",
+    "create": "Create",
+    "delete": "Delete",
+    "update": "Update",
+    "close": "Close",
+    "final": "This operation can not be reversed."
+  },
+  "budgets": {
+    "title": "Budgets",
+    "balance": "Balance",
+    "income": "Income",
+    "expenses": "Expenses",
+    "new": "New Budget",
+    "delete": "Delete Budget",
+    "edit": "Edit Budget",
+    "name": "Name",
+    "currency": "Currency",
+    "categories": "Categories",
+    "categoriesPlaceholder": "Enter a Category",
+    "deleteSure": "Are you sure you want to delete this budget?"
+  },
+  "movements": {
+    "title": "Movements",
+    "type": "Type",
+    "expense": "Expense",
+    "income": "Income",
+    "category": "Category",
+    "description": "Description",
+    "value": "Value",
+    "total": "Total",
+    "new": "Add Movement",
+    "edit": "Update Movement",
+    "delete": "Delete Movement",
+    "deleteSure": "Are you sure you want to delete this movement?"
+  },
+  "filters": {
+    "sort": {
+      "title": "Sort by: ",
+      "latest": "Latest",
+      "oldest": "Oldest"
+    }
+  },
+  "calendar": {
+    "date": "Date",
+    "months": {
+      "0": "December",
+      "1": "January",
+      "2": "February",
+      "3": "March",
+      "4": "April",
+      "5": "May",
+      "6": "June",
+      "7": "July",
+      "8": "August",
+      "9": "September",
+      "10": "October",
+      "11": "November",
+      "12": "December",
+      "13": "January"
+    }
+  }
+}

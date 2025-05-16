@@ -1,0 +1,50 @@
+@import '../../../styles/base/variables';
+
+.modal .form-group {
+  margin-top: 3%;
+}
+
+.modal .form-group label, .modal .form-group input, .modal .form-group select, .modal .form-group select option, .modal .form-group input::placeholder {
+  color: var(--text);
+}
+
+.modal .form-group input, .modal .form-group select {
+  border-color: var(--text);
+}
+
+.modal .form-group input:focus, .modal .form-group select:focus {
+  border-color: var(--accent);
+}
+
+.modal .form-group select option {
+  background-color: var(--bg-alt);
+}
+
+.date-picker-form-group {
+  position: relative;
+}
+
+.calendar-icon-input {
+  position: absolute;
+  right: 0;
+  top: 25px;
+  background: none;
+  border: none;
+
+  &:hover {
+    background: none;
+    color: var(--accent);
+  }
+}
+
+.edit-movement-btn {
+  background: var(--text);
+  color: var(--bg);
+  padding: 1% 2%;
+  margin-top: 2.5%;
+
+  &:not(:disabled):hover {
+    background: var(--primary);
+    color: #fff;
+  }
+}

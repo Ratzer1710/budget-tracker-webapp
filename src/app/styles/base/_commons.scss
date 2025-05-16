@@ -1,0 +1,29 @@
+@import 'variables';
+
+.no-display {
+    display: none !important;
+}
+
+.hidden {
+    visibility: hidden !important;
+}
+
+.uppercase {
+    text-transform: uppercase !important;
+}
+
+p, h2, h1, h3, h4, h5, span {
+    color: var(--text);
+}
+
+.bold {
+    font-weight: 500 !important;
+}
+
+.subtitle {
+    font-size: $subtitle !important;
+}
+
+.red {
+    color: var(--red) !important;
+}

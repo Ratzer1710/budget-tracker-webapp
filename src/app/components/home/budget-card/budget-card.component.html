@@ -1,0 +1,4 @@
+<div class="budget-card area" [class]="cardClass">
+    <h2 class="budget-card-title">{{ (title | translate) + (aux ? ' - ' + (aux | translate) : '') }}</h2>
+    <h1 class="budget-card-value" [ngClass]="getValueClass()">{{ value | currency }}</h1>
+</div>

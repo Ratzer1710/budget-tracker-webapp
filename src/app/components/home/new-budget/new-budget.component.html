@@ -1,0 +1,67 @@
+<div class="overlay" *ngIf="isVisible" (click)="close()"></div>
+<div class="modal area" *ngIf="isVisible" (click)="$event.stopPropagation()">
+  <h2 class="title">{{ 'budgets.new' | translate }}</h2>
+
+  <form [formGroup]="budgetForm" (ngSubmit)="createBudget()">
+    <div class="form-group">
+      <label for="name">{{ 'budgets.name' | translate }}</label>
+      <input
+        formControlName="name"
+        id="name"
+        type="text"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="currency">{{ 'budgets.currency' | translate }}</label>
+      <select formControlName="currency" id="currency" class="form-control">
+        <option *ngFor="let currency of currencyOptions" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="balance">{{ 'budgets.balance' | translate }}</label>
+      <input
+        formControlName="balance"
+        id="balance"
+        type="number"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group category-input">
+      <label for="new-category">{{ 'budgets.categories' | translate }}</label>
+      <div class="input-container">
+        <input
+          id="new-category"
+          type="text"
+          [formControl]="newCategoryControl"
+          class="form-control"
+          (keydown)="handleCategoryKeydown($event)"
+          [placeholder]="'budgets.categoriesPlaceholder' | translate"
+        />
+        <button type="button" class="add-btn" (click)="addCategory()">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="pills-container category-list">
+      <div
+        *ngFor="let category of categories.controls; let i = index"
+        class="pill category-item"
+      >
+        <span>{{ category.value }}</span>
+        <button type="button" class="remove-btn" (click)="removeCategory(i)">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <button class="create-budget-btn" type="submit" [disabled]="!budgetForm.valid">{{ 'actions.create' | translate }}</button>
+  </form>
+  <button class="close-modal-btn" (click)="close()"><i class="fa-solid fa-xmark"></i></button>
+</div>

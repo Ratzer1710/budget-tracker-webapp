@@ -1,0 +1,48 @@
+.pills-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.pill {
+  border-radius: 5px;
+  border: 1px solid var(--bg-alt-2);
+  padding: 2px 10px;
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+}
+
+.pill .remove-btn {
+  background: none;
+  margin-left: 10px;
+  padding: 0;
+  color: var(--text);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--red);
+  }
+}
+
+.pill.filter:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.pill.filter.active {
+    background: var(--primary);
+    color: #fff;
+
+    &:hover {
+        background: none;
+        border-color: var(--red);
+        color: var(--red);
+
+        .remove-btn {
+            color: var(--red);
+        }
+    }
+}

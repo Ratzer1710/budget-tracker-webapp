@@ -1,0 +1,29 @@
+.sidebar {
+    width: 20%;
+    height: 80vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    margin: 0 5%;
+    overflow: hidden;
+}
+
+.sidebar-header {
+    width: 100%;
+    padding: 2% 0;
+    border-bottom: 1px solid var(--hover);
+}
+
+.sidebar-footer {
+    width: 100%;
+    border-top: 1px solid var(--hover);
+}
+
+.sidebar-items {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-flow: column nowrap;
+}

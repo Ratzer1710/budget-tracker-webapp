@@ -1,0 +1,16 @@
+@mixin dark-theme {
+  --primary: #4e2ffe;
+  --secondary: #220d9c;
+  --accent: #9586e9;
+  --text: #e9e9e9;
+  --text-accent: #ffffff;
+  --hover: #828282;
+  --bg: #070707;
+  --bg-alt: #191919;
+  --bg-alt-2: #292929;
+  --green-card: #4a5d23;
+  --red-card: #b31b1b;
+  --red: #ff0800;
+  --green: #54d11a;
+  --yellow: #ffff00;
+}

@@ -1,0 +1,32 @@
+@import '../../../styles/base/variables';
+
+.budget-card {
+    width: 400px;
+    height: 15vh;
+}
+
+.budget-card-title {
+    color: var(--text);
+    padding: 2% 5% 0 5%;
+    font-size: $title;
+    margin: 0;
+}
+
+.budget-card-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--text);
+    margin: 0 !important;
+    height: 10vh;
+}
+
+.budget-card-value-l { font-size: $header; }
+.budget-card-value-m { font-size: $title-xl; }
+.budget-card-value-s { font-size: $title-lg; }
+
+.green-card { background-color: var(--green-card) !important; }
+.red-card { background-color: var(--red-card) !important; }

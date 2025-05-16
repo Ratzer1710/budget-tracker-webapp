@@ -1,0 +1,47 @@
+@import "mixins/dark-theme", "mixins/light-theme", "base/variables",
+  "layout/body", "layout/header", "layout/main", "layout/sidebar",
+  "components/card", "components/input", "base/commons", "components/button",
+  "components/pill", "layout/modal", "layout/popup", "components/datepicker";
+
+:root {
+  --primary: null;
+  --secondary: null;
+  --accent: null;
+  --text: null;
+  --text-accent: null;
+  --hover: null;
+  --bg: null;
+  --bg-alt: null;
+  --bg-alt-2: null;
+  --green-card: null;
+  --red-card: null;
+  --red: null;
+  --green: null;
+  --yellow: null;
+}
+
+body.dark {
+  @include dark-theme();
+  background: #070707;
+}
+
+body.light {
+  @include light-theme();
+  background: #f9f9f9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+
+a.link {
+  color: var(--text) !important;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--accent) !important;
+  }
+}

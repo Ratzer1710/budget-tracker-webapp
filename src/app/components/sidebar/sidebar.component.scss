@@ -1,0 +1,56 @@
+@import '../../styles/base/variables';
+
+.sidebar-header h2 {
+    text-align: center;
+    font-size: $title-lg;
+    color: var(--text);
+}
+
+.new-budget-sidebar-btn {
+    width: 100%;
+    padding: 3% 0;
+    font-size: $title;
+
+    &:hover {
+        color: var(--text-accent);
+        background-color: var(--bg-alt-2);
+    }
+}
+
+.new-budget-sidebar-btn .fa-plus {
+    margin-right: 10px;
+}
+
+.sidebar-item {
+    padding: 2.5% 5% 2.5% 10%;
+    color: var(--text);
+    font-size: $title;
+    border-bottom: 1px solid var(--bg-alt-2);
+    text-align: left;
+    border-radius: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+        background-color: var(--bg-alt-2);
+        color: var(--text-accent);
+    }
+}
+
+.sidebar-item.active {
+    cursor: default;
+    color: #fff;
+    background-color: var(--primary);
+}
+
+.sidebar-item-actions-container {
+    font-size: $subtitle;
+
+    button {
+        margin: 10px;
+    }
+}
+
+.sidebar-item-edit:hover {color: var(--green);}
+.sidebar-item-delete:hover {color: var(--red);}
